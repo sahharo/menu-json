@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../styles/general.css">
+
+  <title>Index</title>
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a href='postagens.html'>Postagens</a></li>
+        <li><a href='albuns.html'>Albuns</a></li>
+        <li><a href='todos.html'>TO-DOs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <a href="../index.html">Voltar para o início</a>
+    <table class="content">
+      <td id="userid"><span>User ID</span></td>
+      <td id="taskid"><span>Task ID</span></td>
+      <td id="title"><span>Title</span></td>
+    </table>
+  </main>
+  <script src="../js/albuns.js"></script>
+  <script>
+  let requestURL = 'https://jsonplaceholder.typicode.com/albums';
+  let request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+  request.onload = function() {
+    const dados = request.response;
+    populateTable(dados);
+  };
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.menu {
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid red;
+  background-color: #eec0c6;
+  margin-bottom: 50px;
+}
+
+.menu li {
+  padding: 20px;
+  display: inline-block;
+  background-color: #e58c8a;
+  border-radius: 50%;
+}
+
+.menu li:hover {
+  background-color: #da5a58;
+}
+
+.menu li a {
+  color: #7ee8fa;
+}
+
+.content td {
+   padding: 25px;
+   border: 1px solid black;
+}
+
+.content span {
+  font-size: 25px;
+  font-weight: bold;
+}
